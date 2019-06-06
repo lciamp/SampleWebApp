@@ -4,9 +4,14 @@
 			<include name="*.jar"/>
 		</fileset>
 	</path>
-	<target name="compile">
-		<javac srcdir="src">
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist"/>
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="src" debug="true" destdir="build/classes">
 			<classpath refid="compile.classpath"/>
 		</javac>
 	</target>
+
 </project>
