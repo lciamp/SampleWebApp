@@ -1,6 +1,6 @@
 package junit;
 
-import static org.junit.Assert.*;
+
 
 
 import org.junit.After;
@@ -43,7 +43,7 @@ public class TestCalculator {
 	 @Test
 	 public void testDivide() {
 		  double result = calc.divide(10, 10);
-		  org.junit.Assert.assertEquals(5, result, 0);
+		  org.junit.Assert.assertEquals(1, result, 0);
 	 }
 	  
 	 @Test(expected = ArithmeticException.class)
