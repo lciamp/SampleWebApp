@@ -36,4 +36,11 @@
 			</test>
 		</junit>
 	</target>
+	<target name="war" depends="compile">
+		<war destfile="dest/SampleWebApp.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent/"/><!-- class filse and any dependent jar files -->
+			<lib dir="WebContent/WEB-INF/lib"/> <!-- for any .jar files-->
+			<classes dir="build/classes"/>
+		</war>
+	</target>
 </project>
